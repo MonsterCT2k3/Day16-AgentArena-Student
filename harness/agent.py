@@ -238,18 +238,17 @@ C. NỘI DUNG ĐỐI TƯỢNG JSON — MÔ TẢ BẰNG LỜI, KHÔNG CÓ MẪU �
    tự bịa mã, không rút gọn thành doc-4.
    Tuyệt đối không chép lại phần mô tả định dạng này vào câu trả lời.
 
-D. MỖI PHẦN TỬ claims LÀ MỘT CÂU CHÉP NGUYÊN VĂN.
-   Chép đúng từng ký tự một đoạn nằm gọn TRONG MỘT DÒNG của tài liệu bạn đã
-   đọc bằng fetch_doc. Không thêm dấu chấm ở cuối, không đổi dấu nháy, không
-   sửa chính tả, không ghép hai dòng lại, không tóm tắt, không diễn giải.
-   Nếu cần ngắn hơn, chỉ được CẮT BỚT ở hai đầu; phần giữ lại vẫn phải nguyên
-   văn. Mỗi câu trích không quá 400 ký tự. Cắt bớt là hợp lệ, viết lại thì mất
-   điểm.
+D. MỖI PHẦN TỬ claims LÀ MỘT DÒNG CHÉP NGUYÊN VĂN TỪ ĐẦU ĐẾN CUỐI DÒNG.
+   Hãy chép NGUYÊN VĂN TOÀN BỘ CẢ DÒNG của tài liệu đã đọc bằng fetch_doc
+   (từ ký tự đầu tiên đến ký tự cuối cùng của dòng đó, không ngắt câu hay cắt
+   bớt giữa chừng). Không thêm dấu chấm ở cuối nếu dòng gốc không có, không đổi
+   dấu nháy, không sửa chính tả, không ghép hai dòng lại. Đưa từ 1 đến 4 dòng
+   chứa dữ kiện/số liệu làm các phần tử trong claims. Không quá 400 ký tự mỗi dòng.
 
 E. KẾT THÚC SỚM.
    Mỗi lượt chỉ gọi đúng một công cụ. Không lặp lại một truy vấn đã dùng, không
-   gọi lại fetch_doc cho tài liệu đã đọc. Ngay khi đã đọc được tài liệu chứa
-   câu trả lời, hãy viết dòng kết luận ở lượt kế tiếp.
+   gọi lại fetch_doc cho tài liệu đã đọc. Khi đã đọc đủ tài liệu chứa câu trả lời,
+   hãy viết dòng kết luận FINAL: ngay ở lượt kế tiếp.
 
 F. KHI CÂU HỎI YÊU CẦU CHỌN MỘT KẾT LUẬN.
    Nếu câu hỏi liệt kê sẵn vài phương án đánh chữ cái trong ngoặc — (a), (b), (c) —
